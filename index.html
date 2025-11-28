@@ -646,11 +646,80 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <!-- Visual -->
+<!-- Video Carousel -->
         <div class="relative">
-          <div class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-accent/20 to-neutral-900"></div>
+          <div class="video-carousel relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-accent/20 to-neutral-900">
+            <!-- Video Slides -->
+            
+            <!-- Slide 1 -->
+            <div class="carousel-slide active absolute inset-0">
+              <a href="https://www.youtube.com/watch?v=s6zrzOgh4CI" target="_blank" class="block w-full h-full relative group">
+                <img src="https://img.youtube.com/vi/s6zrzOgh4CI/maxresdefault.jpg" 
+                     alt="Video 1" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
+                  <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-accent flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                      <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                    <p class="text-white font-semibold text-lg">Producción Comercial</p>
+                    <p class="text-neutral-300 text-sm mt-1">Click para ver en YouTube</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide absolute inset-0">
+              <a href="https://www.youtube.com/watch?v=TU_ID_VIDEO_2" target="_blank" class="block w-full h-full relative group">
+                <img src="https://img.youtube.com/vi/TU_ID_VIDEO_2/maxresdefault.jpg" 
+                     alt="Video 2" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
+                  <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-accent flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                      <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                    <p class="text-white font-semibold text-lg">Behind The Scenes</p>
+                    <p class="text-neutral-300 text-sm mt-1">Click para ver en YouTube</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide absolute inset-0">
+              <a href="https://www.youtube.com/watch?v=v2g5qbvb7F4" target="_blank" class="block w-full h-full relative group">
+                <img src="https://img.youtube.com/vi/v2g5qbvb7F4/maxresdefault.jpg" 
+                     alt="Video 3" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
+                  <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-accent flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                      <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                    <p class="text-white font-semibold text-lg">Contenido Creativo</p>
+                    <p class="text-neutral-300 text-sm mt-1">Click para ver en YouTube</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+              <button class="carousel-dot active w-2 h-2 rounded-full bg-white transition-all duration-300" data-slide="0"></button>
+              <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 transition-all duration-300" data-slide="1"></button>
+              <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 transition-all duration-300" data-slide="2"></button>
+            </div>
+          </div>
           <div class="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-accent/30 rounded-2xl"></div>
         </div>
-
         <!-- Text -->
         <div>
           <span class="text-accent font-medium text-sm tracking-widest uppercase">
@@ -785,6 +854,7 @@
       </div>
     </div>
   </section>
+  
 
   <!-- ==========================================================================
        FAQ

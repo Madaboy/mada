@@ -44,3 +44,63 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Video Carousel
+const carouselSlides = document.querySelectorAll('.carousel-slide');
+const carouselDots = document.querySelectorAll('.carousel-dot');
+let currentSlide = 0;
+const slideInterval = 4000; // 4 seconds
+
+function showSlide(index) {
+  // Remove active class from all slides and dots
+  carouselSlides.forEach(slide => slide.classList.remove('active'));
+  carouselDots.forEach(dot => dot.classList.remove('active'));
+  
+  // Add active class to current slide and dot
+  carouselSlides[index].classList.add('active');
+  carouselDots[index].classList.add('active');
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % carouselSlides.length;
+  showSlide(currentSlide);
+}
+
+// Auto-advance carousel
+let carouselTimer = setInterval(nextSlide, slideInterval);
+
+// Manual navigation with dots
+carouselDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentSlide = index;
+    showSlide(currentSlide);
+    
+    // Reset timer when manually changing slide
+    clearInterval(carouselTimer);
+    carouselTimer = setInterval(nextSlide, slideInterval);
+  });
+});
+
+// Pause carousel on hover
+const videoCarousel = document.querySelector('.video-carousel');
+if (videoCarousel) {
+  videoCarousel.addEventListener('mouseenter', () => {
+    clearInterval(carouselTimer);
+  });
+  
+  videoCarousel.addEventListener('mouseleave', () => {
+    carouselTimer = setInterval(nextSlide, slideInterval);
+  });
+}
+```
+
+## 2️⃣ Cómo obtener miniaturas de YouTube
+
+Para usar videos de YouTube, necesitas el **ID del video**. 
+
+**Ejemplo:** Si tu video es `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
+El ID es: `dQw4w9WgXcQ`
+
+**URL de miniatura de YouTube:**
+```
+https://img.youtube.com/vi/ID_DEL_VIDEO/maxresdefault.jpg

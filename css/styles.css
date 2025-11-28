@@ -150,3 +150,31 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Video Carousel */
+.video-carousel .carousel-slide {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+              transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+}
+
+.video-carousel .carousel-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.carousel-dot {
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  width: 2rem;
+  background: var(--color-accent);
+}
+
+.carousel-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.6);
+}
